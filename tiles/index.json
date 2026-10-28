@@ -1,0 +1,26 @@
+{
+ "mun": {
+  "minzoom": 3,
+  "maxzoom": 10,
+  "tiles": 1021,
+  "bytes": 13116576
+ },
+ "dist": {
+  "minzoom": 6,
+  "maxzoom": 11,
+  "tiles": 3550,
+  "bytes": 19053958
+ },
+ "sec": {
+  "minzoom": 8,
+  "maxzoom": 12,
+  "tiles": 13162,
+  "bytes": 35436906
+ },
+ "bar": {
+  "minzoom": 9,
+  "maxzoom": 13,
+  "tiles": 2023,
+  "bytes": 2755501
+ }
+}

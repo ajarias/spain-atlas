@@ -1,0 +1,43 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Atlas de España · INE</title>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+<link rel="stylesheet" href="assets/atlas.css?v=9473c88091"></head><body>
+<header class="top"><div class="brand"><span data-t="brand">Atlas de España</span><small data-t="sub">datos del INE</small></div><nav class="pages"><a href="index.html" data-es="Mapa" data-en="Map" class=on>Mapa</a><a href="comprar.html" data-es="Comprar vivienda" data-en="Buying a home">Comprar vivienda</a><a href="resumen.html" data-es="Resumen" data-en="Summary">Resumen</a><a href="renta.html" data-es="Renta" data-en="Income">Renta</a><a href="desigualdad.html" data-es="Desigualdad" data-en="Inequality">Desigualdad</a><a href="poblacion.html" data-es="Población" data-en="Population">Población</a><a href="trabajo.html" data-es="Trabajo y educación" data-en="Work and education">Trabajo y educación</a><a href="vivienda.html" data-es="Vivienda y turismo" data-en="Housing and tourism">Vivienda y turismo</a><a href="metodo.html" data-es="Método" data-en="Method">Método</a></nav><button id="lang">ES / EN</button></header>
+<div class="controls">
+  <div class="ctl"><label for="metric" data-t="show">Indicador</label><select id="metric"></select></div>
+  <div class="ctl"><label data-t="detail">Detalle</label><div class="seg" id="levels">
+    <button data-l="auto">Auto</button><button data-l="mun">Municipios</button>
+    <button data-l="dist">Distritos</button><button data-l="sec">Secciones</button>
+    <button data-l="bar">Barrios</button></div></div>
+  <div class="ctl timeline"><button id="play" aria-label="Play">▶</button>
+    <input type="range" id="year" aria-label="Año"><span id="yearLabel"></span></div>
+</div>
+<div class="mapwrap"><div id="map"></div>
+  <div class="panel search"><input id="q" type="search" autocomplete="off" placeholder="Busca tu municipio o calle">
+    <ul class="sugg" id="sugg"></ul>
+    <div class="ex-title" id="exTitle" data-t="examples">Descubre ejemplos de…</div>
+    <div class="chips" id="chips"></div>
+    <button class="collapse" id="more" data-t="more">Ejemplos</button></div>
+  <div class="panel legend" id="legend"></div>
+  <div class="panel hint" id="hint" hidden></div>
+  <div class="panel card" id="card" hidden></div>
+  <button class="canarias" id="canarias">Canarias</button>
+  <div class="tip" id="tip" hidden></div>
+</div>
+<section class="below">
+  <h2 id="mTitle"></h2><p class="desc" id="mDesc"></p>
+  <div class="facts" id="facts"></div>
+  <div class="grid3">
+    <div><h4 data-t="topList">Más altos</h4><ol class="rank" id="topList"></ol></div>
+    <div><h4 data-t="bottomList">Más bajos</h4><ol class="rank" id="bottomList"></ol>
+      <p class="desc" id="rankNote" style="font-size:12px;margin-top:6px"></p></div>
+    <div><h4 id="regionsTitle"></h4><div class="bars" id="regions"></div></div>
+  </div>
+  <div class="srcs" id="mSrc"></div>
+</section>
+<footer class="site" data-es="Elaboración propia con datos del INE (www.ine.es). Estadísticas de área: no describen a individuos. El INE no respalda este análisis. Mapa base, calles y nombres de barrios: © OpenStreetMap, OpenMapTiles, OpenFreeMap (no INE). Vivienda, servicios y seguridad también usan: Dirección General del Catastro, Ministerio de Vivienda (SERPAVI, valor tasado, transacciones), Ministerio del Interior y OpenStreetMap (ODbL), todos no INE; la fuente de cada indicador figura en su ficha." data-en="Own elaboration with INE data (www.ine.es). Area-level statistics: they do not describe individuals. INE does not endorse this analysis. Basemap, streets and neighbourhood names: © OpenStreetMap, OpenMapTiles, OpenFreeMap (non-INE). Housing, services and safety also use: Dirección General del Catastro, Ministerio de Vivienda (SERPAVI, appraised value, transactions), Ministerio del Interior and OpenStreetMap (ODbL), all non-INE; each indicator&#x27;s source is shown on its card.">Elaboración propia con datos del INE (www.ine.es). Estadísticas de área: no describen a individuos. El INE no respalda este análisis. Mapa base, calles y nombres de barrios: © OpenStreetMap, OpenMapTiles, OpenFreeMap (no INE). Vivienda, servicios y seguridad también usan: Dirección General del Catastro, Ministerio de Vivienda (SERPAVI, valor tasado, transacciones), Ministerio del Interior y OpenStreetMap (ODbL), todos no INE; la fuente de cada indicador figura en su ficha.</footer>
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="assets/atlas.js?v=9473c88091"></script>
+<script src="assets/housing.js?v=9473c88091"></script>
+</body></html>
